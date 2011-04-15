@@ -24,9 +24,8 @@ int main() {
 			*(array[i]) = rand() % 50;
 			cout << *(array[i]) << "\t";
 		}
-	} catch (const char* msg) {
-		cout << msg;
-		cout << endl;
+	} catch (bad_alloc& ba) {
+		cerr << "bad_alloc caught: " << ba.what() << endl;
 		return 1;
 	}
 
@@ -40,6 +39,18 @@ int main() {
 
 	for (int i = 0; i < size; i++) {
 		cout << *(array[i]) << "\t";
+	}
+
+	cout << endl << "Bad allocation test (allocate to many blocks):" << endl;
+
+	try {
+		Memory<int> *failed = new Memory<int>();
+		delete failed;
+	} catch (bad_alloc& ba) {
+		cerr << "bad_alloc caught: " << ba.what() << endl;
+	}
+
+	for (int i = 0; i < size; i++) {
 		delete array[i];
 	}
 

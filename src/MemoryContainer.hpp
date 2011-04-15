@@ -205,7 +205,7 @@ public:
 
 		current_alloc_count++;
 		if (current_alloc_count > MAX_ALLOC_COUNT) {
-			throw "fail";	/**< @todo be more specific */
+			throw std::bad_alloc();
 		}
 
 		//get free
@@ -213,7 +213,7 @@ public:
 		found_address = getFreeAddress(requested_size);
 
 		if (found_address == NULL) {
-			throw "out of memory"; /**< @todo be more precise */
+			throw std::bad_alloc();
 		}
 
 		//allocate
