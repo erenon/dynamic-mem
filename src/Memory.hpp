@@ -2,7 +2,6 @@
 #define MEMORY_HPP_
 
 #include <iostream>
-
 #include "MemoryContainer.hpp"
 
 using namespace std;

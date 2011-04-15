@@ -139,6 +139,17 @@ public:
 		unregisterAllocation(m);
 		current_alloc_count--;
 	}
+
+#ifdef DEBUG
+	void dumpMemory() {
+		for (int i = 0; i < current_alloc_count * 5; i+=5) {
+			std::cout << (int)*(memory+i);
+			std::cout << "\t";
+		}
+		std::cout << "\n\n";
+	}
+#endif
+
 };
 
 MemoryContainer MemoryContainer::instance = MemoryContainer();

@@ -34,6 +34,10 @@ int main() {
 
 	heapsort(array, size);
 
+#ifdef DEBUG
+	MemoryContainer::get().dumpMemory();
+#endif
+
 	for (int i = 0; i < size; i++) {
 		cout << *(array[i]) << "\t";
 		delete array[i];
