@@ -38,4 +38,6 @@ int main() {
 		cout << *(array[i]) << "\t";
 		delete array[i];
 	}
+
+	cout << endl;
 }
