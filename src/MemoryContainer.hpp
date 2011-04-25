@@ -1,10 +1,3 @@
-/*
- * MemoryContainer.hpp
- *
- *  Created on: 2011.04.10.
- *      Author: erenon
- */
-
 #ifndef MEMORYCONTAINER_HPP_
 #define MEMORYCONTAINER_HPP_
 
@@ -247,6 +240,6 @@ public:
 /**
  * Creates the singleton instance.
  */
-MemoryContainer MemoryContainer::instance = MemoryContainer();
+MemoryContainer MemoryContainer::instance;
 
 #endif /* MEMORYCONTAINER_HPP_ */

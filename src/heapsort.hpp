@@ -1,8 +1,6 @@
 #ifndef HEAPSORT_HPP_
 #define HEAPSORT_HPP_
 
-#include "Memory.hpp"
-
 /**
  * Swaps two items of and array.
  *
