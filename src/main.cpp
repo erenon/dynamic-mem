@@ -8,11 +8,13 @@
 
 using namespace std;
 
+#define size 20
+
 int main() {
 	//init
 	srand(time(0));
 
-	int size = 20;
+	//int size = 20;
 	Memory<int> *array[size];
 
 	cout << "Custom dynamic memory, heapsort test" << endl;
